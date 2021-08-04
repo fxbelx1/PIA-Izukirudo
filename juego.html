@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> PIA: IZUKIRUDO </title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cute+Font|Fjalla+One|Quicksand&display=swap" rel="stylesheet"> 
+
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+
+		body{
+			background-color: black;
+		}
+
+		#general {
+			margin: 1em auto;
+			width: 900px;
+			background-color: #EAB2D4;
+			padding: 1.00em;
+			border-radius: 1em;
+		}
+
+		#contenido {
+			width: 900px;
+			height: 500px;
+			background-color: #EAB2D4;
+			border-radius: 1em;
+			margin: 1em auto;
+		}
+
+		#tablero {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 63%;
+			height: 95%;
+			background-color: white;
+			border-radius: 1em;
+			float: left;
+			margin: 0.5em;
+		}
+
+		#resultado {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 95%;
+			width: 32%;
+			background-color: white;
+			border-radius: 1em;
+			float: right;
+			margin: 0.5em;
+		}
+
+
+		h1 {
+			color: black;
+			font-family: 'Cute Font', cursive;
+			font-size: 1200%;
+			text-align: center;
+		}
+
+		a#xd{
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 150%;
+			text-decoration: none;
+			color: white;
+			border: 4px solid white;
+			padding: 10px;
+			border-radius: 0.5em;
+			transition: background .3s,color .3s;
+		}
+
+		a#xd:hover{
+			background: black;
+			color: #CC79AC;
+		}
+
+		h2 {
+			color: black;
+			font-family: 'Cute Font', cursive;
+			font-size: 500%;
+			text-align: center;			
+		}
+
+		h3 {
+			color: black;
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 170%;
+		}
+
+		p {
+			text-align: justify;
+			color: black;
+			font-family: consolas;
+			font-size: 110%;
+		}
+
+		h4 {
+			color: black;
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 170%;
+		}
+
+		table {
+			margin: auto;
+			border:2px solid #000;
+			border-collapse: collapse;
+			border:4px solid white;
+			color: black;
+		}
+
+		td {
+			border:1px solid black;
+			padding:10px
+		}
+
+		input#dim {
+			background: #EAB2D4;
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 90%;
+			text-decoration: none;
+			color: white;
+			border: 4px solid white;
+			padding: 10px;
+			border-radius: 0.5em;
+			transition: background .3s,color .3s;
+		}
+
+		input#dim:hover {
+			background: black;
+			color: #CC79AC;
+		}
+
+		a#dim2 {
+			background: #EAB2D4;
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 90%;
+			text-decoration: none;
+			color: white;
+			border: 4px solid white;
+			padding: 10px;
+			border-radius: 0.5em;
+			transition: background .3s,color .3s;
+		}
+
+		a#dim2:hover {
+			background: black;
+			color: #CC79AC;
+		}
+
+		#presultado {
+			background: black;
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 90%;
+			text-decoration: none;
+			color: white;
+			border: 4px solid #EAB2D4;
+			padding: 10px;
+			border-radius: 0.5em;
+			transition: background .3s,color .3s;
+		}
+
+		#presultado:hover{
+			background: white;
+			color: #CC79AC;
+		}
+
+		#botonxd {
+			background: #EAB2D4;
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 90%;
+			text-decoration: none;
+			color: white;
+			border: 4px solid white;
+			padding: 10px;
+			border-radius: 0.5em;
+			transition: background .3s,color .3s;
+		}
+
+		#botonxd:hover {
+			background: black;
+			color: #CC79AC;
+		}
+
+
+	</style>	
+	
+</head>
+<body>
+	<div id="general">
+		</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+		<h1><a name="inicio">Izukirudo</h1>
+		<center>
+			<a id="xd" href="#como_jugar">¿CÓMO JUGAR?</a>
+			<a id="xd" href="#dimension">INICIAR</a>
+		</center>
+
+		</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+		<h2><a id="xd2" name="como_jugar">¿Como jugar?</a></h2>
+		<p> _____________________________________________________________________________________________ </p>
+		<br>
+		<h3>Objetivo: </h3>
+		<p>Hacer click en las casillas correctas, las cuales descubrirán la palabra a encontrar.</p>
+		<br><br>
+		<h4>Pasos: </h4>
+
+		<p> 1. Elegir el tamaño de la cuadrícula. La dificultad aumenta con el tamaño. </p>
+		</br>
+		<p> 2. Analizar la cuadrícula. </p>
+		</br>
+		<img src = "imagenesxd/1.jpg">
+		</br></br>
+		<p> Los números que acompañan a las filas/columnas indícan las casillas en las que hay que hacer click. Si tenemos 1, 5 y 2, significa que en esa fila/columna hay 1 casilla, 5 casillas y 2 casillas, en ese orden y separados por una o más casillas libres.</p>
+		</br>
+		<img src = "imagenesxd/10.jpg">
+		</br></br>
+		<p>Ejemplo: En la imagen se muestra la coordenada “1,1”, lo cual quiere decir que en esa fila hay una letra correcta, una incorrecta y otra correcta, como en este caso la cuadrícula es de 3*3 tenemos que hacer click en “L”, saltar “E” y hacer click en “A”. Así que tenemos “L,A” en esta fila. </p>
+		</br>
+		<img src = "imagenesxd/2.jpg">
+		</br></br>
+		<p>3. Comenzar con las filas/columnas de mayor numero.</p>
+		<p>Nota: si hay una fila/columna sin número, significa que todas las casillas son libres.</p>
+		</br>
+		<img src = "imagenesxd/4.jpg">
+		</br></br>
+		<p>En la imagen tenemos cuatro "2". Siguiendo el ejemplo anterior, vamos a seguir con  el "2" de la primer columna, que ya tiene una casilla seleccionada ("L"), lo que significa que tenemos que hacer click en "O" y descartar "E", pues la columna ya estaría terminada.</p>
+		</br>
+		<img src = "imagenesxd/5.jpg">
+		</br></br>
+		<p>4. Verificar si ya hay filas/columnas terminadas e identificar las casillas a descartar.</p>
+		<p>Cómo podemos ver ya podemos resolver por completo el juego, como es por coordenadas y cada “espacio” en ellas es un salto podemos ver que ya no quedan saltos así que solo tenemos que agregar el recorrido de la coordenada. Ejemplo: la segunda columna vemos que tenemos que seleccionar dos letras y “E” esta descartada solo nos queda “K, A” ahora pasamos a la segunda fila y nos damos cuenta que como no hay saltos seleccionamos “A” y podemos notar que ya todas las coordenadas están completas.</p>
+		</br>
+		<img src = "imagenesxd/7.jpg">
+		</br></br>
+		<p>5. Al terminar de marcar las casillas, escribir las letras que qudaron marcadas, empezando por las filas de arriba hacia abajo y de izquierda a derecha, como se muestra a continuación...</p>
+		</br>
+		<img src = "imagenesxd/9.jpg">
+		</br></br>
+		<p>Si la palabra ingresada es correcta, ganas.</p>
+		</br>
+		<p>Nota:</p>
+		<p>• Si deseas cambiar el tamaño de la cuadricula, da click en "Nuevo juego" y sigue los mismos pasos. </p>
+		<p>• Si seleccionaste una casilla erronea, puedes volver a hacer click y volvera a su estado original.</p>
+
+		</br></br></br></br></br>
+		
+		<center>
+			<a id="xd" href="#dimension">INICIAR</a>
+		</center>
+
+		</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+		<p> _____________________________________________________________________________________________ </p>
+		</br>
+
+		<!-- TABLERO -->
+
+		<center>
+		<h3><a id="xd2" name="dimension">Elije el tamaño: </a></h3>
+		</br></br></br></br>
+		<input id="dim" type="button" value="3 X 3" onclick="three()">
+		<input id="dim" type="button" value="4 X 4" onclick="four()">
+		<input id="dim" type="button" value="5 X 5" onclick="five()">
+		<input id="dim" type="button" value="6 X 6" onclick="six()">
+		</center>
+
+		</br></br></br></br></br>
+
+		<div id="contenido">
+			<div id="tablero"></div>
+			<div id="resultado">
+				<center>
+					<h4><a id="xd2">Escribe aqui la palabra:</h4>
+					</br>
+					<input type="text" id="presultado" name="presultado"/>
+					</br></br>
+					<button id="botonxd" onclick="comprobar();">Comprobar</button>
+				</center>
+			</div>
+		</div>
+
+		<center>
+			</br></br>
+			<input id="dim" type="button" value="Nuevo juevo" onclick="nuevojuego();">
+			<a id="dim2" href="#inicio">Regresar al inicio</a>
+			</br></br></br>
+		</center>
+
+
+	</div>
+
+		<script type="text/javascript">
+			
+			var desbot = 0;
+			var rcomp = 0;
+			var cont = 0;
+			var pal;
+
+			
+		var t = 0;
+		//* FUNCION DE 3X3 *//
+		function three()
+		{
+			if(desbot==0)
+			{
+			desbot = desbot + 1;
+			rcomp = rcomp + 1;
+			if(t==0)
+			{	
+				t=t+1;
+				var palabra = "switacbhc";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 4; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 4; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==1 && j==0){
+   								var textoCelda = document.createTextNode("3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==1) || (i==0 && j==3)){
+   								var textoCelda = document.createTextNode("2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==2 && j==0) || (i==0 && j==2)){
+   								var textoCelda = document.createTextNode("1,1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==3 && j==0){
+   								var textoCelda = document.createTextNode("1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1;
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			else
+			{
+				t=t-1;
+				var palabra = "sftringso";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 4; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 4; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==1 && j==0){
+   								var textoCelda = document.createTextNode("1,1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==1) || (i==2 && j==0)){
+   								var textoCelda = document.createTextNode("3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==3) || (i==0 && j==2) || (i==3 && j==0)){
+   								var textoCelda = document.createTextNode("2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1;
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			}
+		}
+
+
+		var f = 0;
+		//* FUNCION 4X4 *//
+		function four()
+		{
+			if(desbot==0)
+			{
+			desbot = desbot + 1;	
+			rcomp = rcomp +1;
+			if(f==0)
+			{	
+				f=f+1;
+				var palabra = "funcaiolnesesana";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 5; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 5; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==1 && j==0){
+   								var textoCelda = document.createTextNode("4");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==1){
+   								var textoCelda = document.createTextNode("1, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==2 && j==0) || (i==0 && j==2) || (i==0 && j==3)){
+   								var textoCelda = document.createTextNode("2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==3 && j==0) || (i==0 && j==4)){
+   								var textoCelda = document.createTextNode("1, 1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   							if(i==4 && j==0){
+   								var textoCelda = document.createTextNode("1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1;
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			else
+			{
+				f=f-1;
+				var palabra = "vareraliableofri";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 5; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 5; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==1 && j==0) || (i==0 && j==4)){
+   								var textoCelda = document.createTextNode("2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==1) || (i==3 && j==0)){
+   								var textoCelda = document.createTextNode("4");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==3) || (i==4 && j==0)){
+   								var textoCelda = document.createTextNode("1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==2 && j==0) || (i==0 && j==2)){
+   								var textoCelda = document.createTextNode("1, 1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1;
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			}
+		}
+
+		var fi=0;
+		//* FUNCION 5X5 *//
+		function five()
+		{
+			if(desbot==0)
+			{
+			desbot = desbot + 1;
+			rcomp = rcomp + 1;
+			if(fi==0)
+			{	
+				fi=fi+1;
+				var palabra = "iwdenatetifirpacadorrkess";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 6; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 6; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==1 && j==0) || (i==0 && j==1)){
+   								var textoCelda = document.createTextNode("1, 3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==2 && j==0) || (i==3 && j==0) || (i==0 && j==2) || (i==0 && j==5)){
+   								var textoCelda = document.createTextNode("2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==4){
+   								var textoCelda = document.createTextNode("2, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   							if(i==4 && j==0){
+   								var textoCelda = document.createTextNode("4");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==5 && j==0) || (i==0 && j==3)){
+   								var textoCelda = document.createTextNode("1, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1;
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			else
+			{
+				fi=fi-1;
+				var palabra = "vooplueradomresescalarese";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 6; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 6; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==1 && j==0){
+   								var textoCelda = document.createTextNode("2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==1) || (i==0 && j==5)){
+   								var textoCelda = document.createTextNode("3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==3) || (i==0 && j==4) || (i==4 && j==0)){
+   								var textoCelda = document.createTextNode("5");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==2 && j==0) || (i==5 && j==0)){
+   								var textoCelda = document.createTextNode("4");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   							if(i==0 && j==2){
+   								var textoCelda = document.createTextNode("1, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==3 && j==0){
+   								var textoCelda = document.createTextNode("1, 3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1;
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			}
+		}
+
+		var s=0;
+		//* FUNCION 6X6 *//
+		function six()
+		{
+			if(desbot==0)
+			{
+			desbot = desbot + 1;
+			rcomp = rcomp + 1;
+			if(s==0)
+			{	
+				s=s+1;
+				var palabra = "lsenigumpajelesdepplanjroegramatcion";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 7; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 7; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==1 && j==0){
+   								var textoCelda = document.createTextNode("1, 2, 1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==2 && j==0){
+   								var textoCelda = document.createTextNode("1, 3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==4){
+   								var textoCelda = document.createTextNode("3, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   							if(i==4 && j==0){
+   								var textoCelda = document.createTextNode("1, 1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==5 && j==0) || (i==6 && j==0)){
+   								var textoCelda = document.createTextNode("1, 4");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==3 && j==0){
+   								var textoCelda = document.createTextNode("3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==1) || (i==0 && j==6)){
+   								var textoCelda = document.createTextNode("2, 3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==3){
+   								var textoCelda = document.createTextNode("1, 1, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==5){
+   								var textoCelda = document.createTextNode("2, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==2){
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1;
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			else
+			{
+				s=s-1;
+				var palabra = "rleicunrksividadmultinparkippapercle";
+				var k = 0;
+				var body = document.getElementById("tablero");
+  				var tabla = document.createElement("table");
+  				var tblBody = document.createElement("tbody");
+  				for (var i = 0; i < 7; i++) {
+  					var hilera = document.createElement("tr");
+ 
+    				for (var j = 0; j < 7; j++) {
+   						if(i!=0 && j!=0)
+   						{
+   							var celda = document.createElement("td");
+   							var textoCelda = document.createTextNode(palabra.charAt(k));
+      						k = k+1;
+      						celda.appendChild(textoCelda);
+      						hilera.appendChild(celda);
+
+   						}
+   						else
+   						{
+   							var celda = document.createElement("td");
+
+   							if(i==0 && j==0){
+   								var textoCelda = document.createTextNode(">");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==1 && j==0){
+   								var textoCelda = document.createTextNode("1, 1, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==1){
+   								var textoCelda = document.createTextNode("1, 2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==3){
+   								var textoCelda = document.createTextNode("1, 1, 1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==2 && j==0){
+   								var textoCelda = document.createTextNode("1, 3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   							if(i==0 && j==2){
+   								var textoCelda = document.createTextNode("3");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==3 && j==0){
+   								var textoCelda = document.createTextNode("6");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==4 && j==0) || (i==5 && j==0) || (i==6 && j==0)){
+   								var textoCelda = document.createTextNode("2");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if((i==0 && j==5) || (i==0 && j==6)){
+   								var textoCelda = document.createTextNode("3, 1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+
+   							if(i==0 && j==4){
+   								var textoCelda = document.createTextNode("2, 1");
+   								celda.appendChild(textoCelda);
+      							hilera.appendChild(celda);
+   							}
+   						}
+    				}
+ 		
+    				tblBody.appendChild(hilera);
+ 				}
+
+  				tabla.appendChild(tblBody);
+ 				body.appendChild(tabla);
+  				var clickxd = document.querySelectorAll("td");
+
+				for(var c = 0; c < clickxd.length; c++)
+ 				{
+ 					clickxd[c].onclick = function()
+ 					{
+ 						rcomp = rcomp + 1;
+ 						if(this.style.background == "palevioletred")
+ 						{
+ 							this.style.background = "white";
+ 							cont = cont - 1; 
+ 						}
+ 						else
+ 						{
+ 							this.style.background = "palevioletred";
+ 							cont = cont + 1;
+ 						}
+ 					}
+ 				}
+			}
+			}	
+		}
+
+		//* FUNCION DE BOTON "COMPROBAR" *//
+			function comprobar()
+			{
+				if(rcomp==0)
+				{
+					alert("Selecciona el tamaño de la cuadrícula.");
+				}
+				if(rcomp>0)
+				{
+					if(rcomp==1)
+					{
+						alert("Antes de comprobar tienes que hacer clic en las casillas correctamente.");
+					}
+					else
+					{
+						
+						if(cont==6)
+						{
+							pal="switch";
+						}
+						if(cont==7)
+						{
+							pal="strings";
+						}
+						if(cont==9)
+						{
+							pal="funciones";
+						}
+						if(cont==8)
+						{
+							pal="variable";
+						}
+						if(cont==15)
+						{
+							pal="identificadores";
+						}
+						if(cont==19)
+						{
+							pal="operadoresescalares";
+						}
+						if(cont==23)
+						{
+							pal="lenguajesdeprogramacion";
+						}
+						if(cont==20)
+						{
+							pal="recursividadmultiple";
+						}
+
+						var p = document.getElementById("presultado").value;
+						if(p==pal)
+						{
+							alert('¡HAS GANADO! \n > Si deseas seguir jugando, da click en "NUEVO JUEGO". \n > Si deseas salir del juego, da click en "REGRESAR AL INICIO".');
+						}
+						else
+						{
+							alert("Vuelve a intentarlo");
+						}
+					}
+				}
+			}
+
+			function nuevojuego()
+			{
+				rcomp = 0;
+				desbot = 0;
+				cont = 0;
+				pal = null;
+				var padre = document.getElementById("tablero");
+				while (padre.firstChild)
+				{
+					padre.removeChild(padre.firstChild);
+				}
+			}
+
+		</script>
+	</div>
+
+</body>
+</html>
